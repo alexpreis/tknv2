@@ -1,0 +1,94 @@
+body {
+    /*font-family: Arial, Helvetica, sans-serif, sans-serif;*/
+    font-family: Orbitron;
+    margin: 0;
+    padding: 0;
+    background-color: #cc9a07;
+}
+
+header {
+    background-color: #FF9622;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+footer {
+    background-color: #FF9622;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #002040;
+}
+
+.text-with-shadow {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 900;
+}
+
+.logo {
+    width: 100px;
+    float: left;
+    /* Логотип слева */
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .company-name {
+        font-size: 16px;
+        /* Уменьшаем размер текста для маленьких экранов */
+    }
+    .small-text {
+        font-size: 12px;
+        /* Уменьшаем размер текста для маленьких экранов */
+    }
+}
