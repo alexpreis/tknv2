@@ -1,0 +1,343 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 1200px;
+    /* Ограничиваем максимальную ширину контейнера */
+}
+
+header {
+    background-color: #3b82f6;
+    /* Tailwind's blue-600 */
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Tailwind's shadow-md */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-radius: 0.5rem;
+    /* Tailwind's rounded-md */
+}
+
+header .logo {
+    font-size: 1.25rem;
+    /* Tailwind's text-xl */
+    font-weight: bold;
+    /* Tailwind's font-bold */
+    margin-left: 1rem;
+    /* Tailwind's ml-4 */
+}
+
+header .logo img {
+    height: 2rem;
+    /* Tailwind's h-8 */
+}
+
+header nav {
+    margin-right: 1rem;
+    /* Tailwind's mr-4 */
+}
+
+header nav ul {
+    display: flex;
+    space-x-1rem;
+    /* Tailwind's space-x-4 */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #bfdbfe;
+    /* Tailwind's blue-200 */
+}
+
+#mobile-menu-button {
+    color: white;
+    outline: none;
+}
+
+#mobile-menu {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    /* Tailwind's top-16 (приблизительно) */
+    right: 0;
+    background-color: #3b82f6;
+    /* Tailwind's bg-blue-600 */
+    border-radius: 0.5rem;
+    /* Tailwind's rounded-md */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Tailwind's shadow-lg */
+    padding: 1rem;
+    /* Tailwind's p-4 */
+    space-y: 0.5rem;
+    /* Tailwind's space-y-2 */
+    width: 12rem;
+    /* Tailwind's w-48 */
+}
+
+#mobile-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+#mobile-menu a:hover {
+    color: #bfdbfe;
+    /* Tailwind's blue-200 */
+}
+
+main {
+    margin-top: 2rem;
+    /* Tailwind's mt-8 */
+    padding-left: 1rem;
+    /* Tailwind's p-4 */
+    padding-right: 1rem;
+    /* Tailwind's p-4 */
+}
+
+.slider {
+    margin-bottom: 2rem;
+    /* Tailwind's mb-8 */
+}
+
+.slider .carousel-inner {
+    border-radius: 0.5rem;
+    /* Tailwind's rounded-md */
+}
+
+.slider .carousel-item img {
+    border-radius: 0.5rem;
+    /* Tailwind's rounded-md */
+}
+
+#products {
+    margin-bottom: 2rem;
+    /* Tailwind's mb-8 */
+}
+
+#products h2 {
+    font-size: 1.5rem;
+    /* Tailwind's text-2xl */
+    font-weight: 600;
+    /* Tailwind's font-semibold */
+    color: #4a5568;
+    /* Tailwind's gray-800 */
+    margin-bottom: 1rem;
+    /* Tailwind's mb-4 */
+    text-align: center;
+}
+
+#products .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Одна колонка на мобильных */
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        /* Две колонки на планшетах */
+    }
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+        /* Четыре колонки на десктопах */
+    }
+    gap: 1.5rem;
+    /* Tailwind's gap-6 */
+}
+
+#products .product-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    /* Tailwind's rounded-md */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Tailwind's shadow-md */
+    padding: 1rem;
+    /* Tailwind's p-4 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#products .product-card img {
+    height: 8rem;
+    /* Tailwind's h-32 (приблизительно) */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    /* Tailwind's mb-4 */
+    border-radius: 0.5rem;
+    /* Tailwind's rounded-md */
+}
+
+#products .product-card h3 {
+    font-size: 1.125rem;
+    /* Tailwind's text-lg */
+    font-weight: 600;
+    /* Tailwind's font-semibold */
+    color: #4a5568;
+    /* Tailwind's gray-700 */
+    margin-bottom: 0.5rem;
+    /* Tailwind's mb-2 */
+    text-align: center;
+}
+
+#products .product-card p {
+    font-size: 0.875rem;
+    /* Tailwind's text-sm */
+    color: #718096;
+    /* Tailwind's gray-600 */
+    margin-bottom: 1rem;
+    /* Tailwind's mb-4 */
+    text-align: center;
+}
+
+#products .product-card button {
+    background-color: #3b82f6;
+    /* Tailwind's bg-blue-500 */
+    color: white;
+    font-weight: bold;
+    /* Tailwind's font-bold */
+    padding-top: 0.5rem;
+    /* Tailwind's py-2 */
+    padding-bottom: 0.5rem;
+    /* Tailwind's py-2 */
+    padding-left: 1rem;
+    /* Tailwind's px-4 */
+    padding-right: 1rem;
+    /* Tailwind's px-4 */
+    border-radius: 0.5rem;
+    /* Tailwind's rounded-md */
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+#products .product-card button:hover {
+    background-color: #2563eb;
+    /* Tailwind's bg-blue-700 */
+}
+
+#company {
+    margin-bottom: 2rem;
+    /* Tailwind's mb-8 */
+    background-color: white;
+    border-radius: 0.5rem;
+    /* Tailwind's rounded-md */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Tailwind's shadow-md */
+    padding: 1.5rem;
+    /* Tailwind's p-6 */
+}
+
+#company h2 {
+    font-size: 1.5rem;
+    /* Tailwind's text-2xl */
+    font-weight: 600;
+    /* Tailwind's font-semibold */
+    color: #4a5568;
+    /* Tailwind's gray-800 */
+    margin-bottom: 1rem;
+    /* Tailwind's mb-4 */
+    text-align: center;
+}
+
+#company p {
+    font-size: 1rem;
+    /* Tailwind's text-md */
+    color: #4a5568;
+    /* Tailwind's gray-700 */
+    text-align: center;
+}
+
+#contact {
+    margin-bottom: 2rem;
+    /* Tailwind's mb-8 */
+    background-color: #edf2f7;
+    /* Tailwind's gray-200 */
+    border-radius: 0.5rem;
+    /* Tailwind's rounded-md */
+    padding: 1.5rem;
+    /* Tailwind's p-6 */
+}
+
+#contact h2 {
+    font-size: 1.5rem;
+    /* Tailwind's text-2xl */
+    font-weight: 600;
+    /* Tailwind's font-semibold */
+    color: #4a5568;
+    /* Tailwind's gray-800 */
+    margin-bottom: 1rem;
+    /* Tailwind's mb-4 */
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1rem;
+    /* Tailwind's text-md */
+    color: #4a5568;
+    /* Tailwind's gray-700 */
+    text-align: center;
+}
+
+footer {
+    background-color: #4a5568;
+    /* Tailwind's gray-800 */
+    color: white;
+    padding-top: 1rem;
+    /* Tailwind's py-4 */
+    padding-bottom: 1rem;
+    /* Tailwind's py-4 */
+    text-align: center;
+    border-radius: 0.5rem;
+    /* Tailwind's rounded-md */
+    margin-top: 2rem;
+}
+
+
+/* Стили для мобильных устройств */
+
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+    }
+    .md\:hidden {
+        display: block;
+    }
+    .md\:block {
+        display: none;
+    }
+}
+
+
+/* Стили для планшетов */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #products .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Стили для десктопов */
+
+@media (min-width: 1024px) {
+    #products .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

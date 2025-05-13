@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSC Tehnokaravan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> </head>
+
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white py-4 flex justify-between items-center shadow-md sticky top-0 z-10 rounded-md">
+        <div class="logo text-xl font-bold ml-4">
+            <img src="placeholder_logo.png" alt="Логотип Технокараван" class="h-8">
+        </div>
+        <nav class="mr-4 hidden md:block">
+            <ul class="flex space-x-4">
+                <li><a href="#products" class="hover:text-blue-200 no-underline">Продукция</a></li>
+                <li><a href="#company" class="hover:text-blue-200 no-underline">О компании</a></li>
+                <li><a href="#contact" class="hover:text-blue-200 no-underline">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="md:hidden mr-4">
+            <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Мобильное меню">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            <div id="mobile-menu" class="hidden absolute top-16 right-0 bg-blue-600 rounded-md shadow-lg p-4 space-y-2 w-48">
+                <a href="#products" class="block text-white hover:text-blue-200 no-underline">Продукция</a>
+                <a href="#company" class="block text-white hover:text-blue-200 no-underline">О компании</a>
+                <a href="#contact" class="block text-white hover:text-blue-200 no-underline">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4">
+        <section class="slider mb-8">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded-md">
+                    <div class="carousel-item active">
+                        <img src="placeholder_slide1.jpg" class="d-block w-100 rounded-md" alt="Слайд 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="placeholder_slide2.jpg" class="d-block w-100 rounded-md" alt="Слайд 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="placeholder_slide3.jpg" class="d-block w-100 rounded-md" alt="Слайд 3">
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        </section>
+
+        <section id="products" class="mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Продукция</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="product-card bg-white rounded-md shadow-md p-4 flex flex-col justify-between">
+                    <img src="placeholder_bearing.jpg" alt="Подшипники" class="h-32 mx-auto mb-4 rounded-md">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2 text-center">Подшипники</h3>
+                    <p class="text-gray-600 text-sm mb-4 text-center">Широкий ассортимент подшипников различных типов и размеров.</p>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md mx-auto">Подробнее</button>
+                </div>
+                <div class="product-card bg-white rounded-md shadow-md p-4 flex flex-col justify-between">
+                    <img src="placeholder_belt.jpg" alt="Приводные ремни" class="h-32 mx-auto mb-4 rounded-md">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2 text-center">Приводные ремни</h3>
+                    <p class="text-gray-600 text-sm mb-4 text-center">Ремни клиновые, зубчатые и поликлиновые для различных применений.</p>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md mx-auto">Подробнее</button>
+                </div>
+                <div class="product-card bg-white rounded-md shadow-md p-4 flex flex-col justify-between">
+                    <img src="placeholder_seal.jpg" alt="Уплотнения вала" class="h-32 mx-auto mb-4 rounded-md">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2 text-center">Уплотнения вала</h3>
+                    <p class="text-gray-600 text-sm mb-4 text-center">Сальники, манжеты и другие уплотнительные элементы.</p>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md mx-auto">Подробнее</button>
+                </div>
+                <div class="product-card bg-white rounded-md shadow-md p-4 flex flex-col justify-between">
+                    <img src="placeholder_hose.jpg" alt="Рукава высокого давления" class="h-32 mx-auto mb-4 rounded-md">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2 text-center">Рукава РВД</h3>
+                    <p class="text-gray-600 text-sm mb-4 text-center">Рукава высокого давления для гидравлических систем.</p>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md mx-auto">Подробнее</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="company" class="mb-8 bg-white rounded-md shadow-md p-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">О компании</h2>
+            <p class="text-gray-700 text-md text-center">JSC Tehnokaravan - надежный поставщик промышленных комплектующих. Мы предлагаем широкий выбор подшипников, приводных ремней, уплотнений вала и рукавов высокого давления. Наша миссия - обеспечивать предприятия качественной продукцией и отличным
+                сервисом.
+            </p>
+        </section>
+
+        <section id="contact" class="mb-8 bg-gray-200 rounded-md p-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Контакты</h2>
+            <p class="text-gray-700 text-md text-center">Телефон: +7 (XXX) XXX-XX-XX</p>
+            <p class="text-gray-700 text-md text-center">Email: info@tehnokaravan.ru</p>
+            <p class="text-gray-700 text-md text-center">Адрес: г. [Город], ул. [Улица], д. [Дом]</p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
+        <p>© 2023 JSC Tehnokaravan. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
